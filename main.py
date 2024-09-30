@@ -23,9 +23,9 @@ def handle_converstaion():
         if user_input.lower() == "exit":
             break
 
-    res = chain.invoke({"context": context , "question": user_input})
-    print("Bot: ", res)
-    context += f"\nUser: {user_input}\nAI: {res}"
+        res = chain.invoke({"context": context , "question": user_input})
+        print("Bot: ", res)
+        context += f"\nUser: {user_input}\nAI: {res}"
 
 if __name__=="__main__":
     handle_converstaion()
